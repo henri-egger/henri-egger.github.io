@@ -18,8 +18,27 @@ body {
   justify-content: center;
 }
 
-.message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@keyframes zooomOut {
+  from {
+  }
+  to {
+    font-size: 6500px;
+    top: -700px;
+    left: -1550px;
+    display: none;
+  }
+}
+
+.zooomOut-lock {
+  overflow: hidden;
+}
+
+.zooomOut {
+  top: 0;
+  left: 0;
+  position: relative;
+  animation: zooomOut;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
